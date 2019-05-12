@@ -18,7 +18,7 @@ class PaynowServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes(
-            [__DIR__ . '/../config/paynow.php' => config_path()],
+            [__DIR__ . '/../config' => config_path()],
             'paynow-config'
         );
     }
