@@ -4,7 +4,6 @@ namespace Musonza\Paynow;
 
 use Illuminate\Support\ServiceProvider;
 use Paynow\Payments\Paynow;
-use Illuminate\Foundation\Application as LaravelApplication;
 
 class PaynowServiceProvider extends ServiceProvider
 {
