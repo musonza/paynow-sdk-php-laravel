@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/musonza/paynow-sdk-php-laravel.svg?branch=master)](https://travis-ci.org/musonza/paynow-sdk-php-laravel)
+
 ## Introduction
 
 A Laravel 5 service provider for the Paynow SDK for PHP
