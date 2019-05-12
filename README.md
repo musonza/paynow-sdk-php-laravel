@@ -3,6 +3,7 @@
 ## Introduction
 
 A Laravel 5 service provider for the Paynow SDK for PHP
+
 See https://github.com/paynow/Paynow-PHP-SDK
 
 ## Installation
