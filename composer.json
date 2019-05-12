@@ -1,0 +1,41 @@
+{
+    "name": "musonza/paynow-sdk-php-laravel",
+    "description": "A Laravel 5 service provider for the Paynow SDK for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tmusonza",
+            "email": "tashtin263@gmail.com"
+        }
+    ],
+    "require": {
+        "paynow/php-sdk": "*",
+        "illuminate/support": "~5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0|~5.0",
+        "vlucas/phpdotenv": "~2.0|~3.0",
+        "laravel/framework": "^5.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Musonza\\Paynow\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Musonza\\Paynow\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Musonza\\Paynow\\PaynowServiceProvider"
+            ],
+            "aliases": {
+                "Paynow": "Musonza\\Paynow\\PaynowFacade"
+            }
+        }
+    }
+}
