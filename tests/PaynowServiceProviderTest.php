@@ -40,6 +40,22 @@ class PaynowServiceProviderTest extends \PHPUnit_Framework_TestCase
         $this->assertContains('paynow', $provider->provides());
     }
 
+    public function testSendReturnsInitResponse()
+    {
+        $this->expectException(\Paynow\Payments\InvalidIntegrationException::class);
+
+        $payment = Paynow::createPayment('Invoice 35', 'user@example.com');
+        $payment->add([
+            ['title' => 'Candles', 'amount' => 1.5],
+            ['title' => 'Sandwich', 'amount' => 2],
+            ['title' => 'Bacon', 'amount' => 4],
+        ], '0B921');
+
+        $response = Paynow::send($payment);
+
+        $this->assertInstanceOf(\Paynow\Core\InitResponse::class, $response);
+    }
+
     protected function setupApplication()
     {
         $app = new Application();
